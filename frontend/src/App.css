@@ -1,0 +1,115 @@
+/* Custom styles for the Traffic Simulation Platform */
+
+.simulation-canvas {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.metrics-card {
+  transition: all 0.3s ease;
+}
+
+.metrics-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.upload-area {
+  border: 2px dashed #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.upload-area.dragover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.slider-track {
+  background: #e5e7eb;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.slider-thumb {
+  background: #3b82f6;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.vehicle-icon {
+  transition: all 0.1s ease;
+}
+
+.vehicle-icon:hover {
+  transform: scale(1.2);
+}
+
+.traffic-light {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 2px;
+  transition: all 0.3s ease;
+}
+
+.traffic-light.red {
+  background-color: #ef4444;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.traffic-light.yellow {
+  background-color: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.traffic-light.green {
+  background-color: #10b981;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.traffic-light.off {
+  background-color: #6b7280;
+}
+
+/* Animation for real-time updates */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+}
+
+.real-time-update {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .simulation-canvas {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+} 
